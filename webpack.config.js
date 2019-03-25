@@ -1,8 +1,24 @@
 var path = require('path');
+var hwp = require('html-webpack-plugin');
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.jsx',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist')
-    }
+    },
+    module: {
+    rules:[
+          {
+            
+            test: /\.(jsx)$/,
+            exclude: /node_modules/,
+            use: {
+              loader: "babel-loader"
+            }
+      },
+    ]
+},
+plugins: [
+    new hwp({template: path.join(__dirname, './src/index.html')})
+]
 }
