@@ -3,8 +3,8 @@ var hwp = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.jsx',
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, './dist')
+        path: path.join(__dirname, './dist'),
+        filename: '[name].build.js'
     },
     module: {
     rules:[

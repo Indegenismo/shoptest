@@ -2,9 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 class App extends React.Component {
-	// constructor(props, state){
-	// 	super(props,state);
-    // }
+	constructor(props, state){
+		super(props,state);
+    }
 
 
 
